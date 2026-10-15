@@ -1,0 +1,22 @@
+[project]
+name = "altmend"
+version = "0.1.0"
+description = "Find images with missing alt text in HTML and Markdown, and write it for them using Gemma 4 vision."
+readme = "README.md"
+requires-python = ">=3.10"
+license = { text = "MIT" }
+keywords = ["accessibility", "alt-text", "gemma", "a11y", "cli"]
+dependencies = [
+    "requests>=2.31.0",
+    "google-genai>=1.0.0",
+]
+
+[project.scripts]
+altmend = "altmend.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["altmend"]
